@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #6b9eb6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .item {
+            margin-bottom: 20px;
+            border: 1px solid #c24848;
+            border-radius: 5%;
+        }
+        .question {
+            background-color: #dbd6e6;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .answer {
+            padding: 10px;
+            display: none;
+            background-color: rgb(64, 61, 116);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        <div class="item">
+            <div class="question">What is HTML?</div>
+            <div class="answer">HTML stands for HyperText Markup Language. It is the standard markup language for creating web pages and web applications.</div>
+        </div>
+        <div class="item">
+            <div class="question">What is CSS?</div>
+            <div class="answer">CSS stands for Cascading Style Sheets. It is used to describe the presentation of a document written in HTML or XML.</div>
+        </div>
+        <div class="item">
+            <div class="question">What is JavaScript?</div>
+            <div class="answer">JavaScript is a high-level, interpreted programming language that enables interactive web pages and is an essential part of web applications.</div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
